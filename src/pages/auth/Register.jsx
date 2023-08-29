@@ -96,7 +96,11 @@ const Register = () => {
 				},
 				withCredentials: true,
 			}).then((res) => {
-				naviGate('/')
+				console.log(res);
+				if(res?.data?.success){
+					naviGate('/')
+					return
+				}
 				console.log(firstname, lastname, email, password, location, occupation);
 				setLoader(false)
 			}).catch((err) => {

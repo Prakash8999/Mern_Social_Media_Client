@@ -5,6 +5,8 @@ import Register from './pages/auth/Register';
 import Login from './pages/auth/Login';
 import ProfilePage from './pages/user/Profile';
 import { Context } from './context/Context';
+import CreatePost from './pages/post/CreatePost';
+import SingleUserPost from './pages/MyPost/SingleUserPost';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/profile/:userId' element={<ProfilePage />} />
             <Route path='/home' element={<Home />} />
+            <Route path='/mypost' element={<SingleUserPost />} />
+            <Route path='/profile' element={<ProfilePage />} />
           </Routes>
         </Context>
       </Router>

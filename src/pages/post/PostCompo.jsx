@@ -27,6 +27,7 @@ const PostCompo = ({ className }) => {
 
 		}).then((res) => {
 			console.log(res);
+			setPost("")
 		}).catch((err)=>{
 console.log(err);
 		})
@@ -36,11 +37,11 @@ console.log(err);
 
 	return (
 		<>
-			<div className={` h-fit  rounded-xl flex flex-col gap-y-2  bg-gray-200 py-1.5 px-4 ${className}`} >
-				<div className='flex gap-x-4 justify-between w-full'>
+			<div className={` h-fit  rounded-xl flex flex-col gap-y-2  bg-gray-200 py-1.5 px-2 ${className}`} >
+				<div className='flex gap-x-2 justify-between w-full items-center'>
+					<UserImage className={'w-10 h-10'} />
 
 
-					<UserImage className={'w-12 h-12'} />
 
 
 					<div className="relative  h-12 ">
@@ -54,11 +55,11 @@ console.log(err);
 							onChange={(e) => {
 								setPost(e.target.value)
 							}}
-							id="default-search" className=" block w-[28vw] h-12  pl-10 pr-2 pb-1 text-sm text-gray-900 border border-gray-300 rounded-2xl bg-gray-50 outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Whats on your mind" required />
+							id="default-search" className=" block w-[25vw] h-12  pl-10 pr-2 pb-1 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white " placeholder="Whats on your mind" required />
 						{/* <button type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> */}
 					</div>
 
-					<button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold h px-2 rounded-lg w-24  transition-colors duration-300" >Post</button>
+					<button onClick={handleSubmit} className="bg-blue-500 hover:bg-blue-600 text-white font-semibold  rounded-full w-fit px-3 h-10  transition-colors duration-300" >Post</button>
 
 
 

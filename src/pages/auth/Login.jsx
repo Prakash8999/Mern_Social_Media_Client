@@ -25,10 +25,11 @@ const Login = () => {
 				withCredentials: true,
 			}
 		).then((res) => {
-			console.log(res.data);
+	
 			localStorage.setItem("token", res?.data?.token)
 			localStorage.setItem("token1", "123432")
 			const jwtdecode = jwtDecode(res?.data?.token)
+			console.log(res?.data);
 			// console.log(jwtdecode);
 			naviGate('/home')
 		}).catch((err) => {

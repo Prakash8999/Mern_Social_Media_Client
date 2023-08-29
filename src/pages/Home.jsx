@@ -9,14 +9,18 @@ const Home = () => {
 	//  Template Code
 	return (
 		<>
-			<Navbar />
-			<div className='flex py-6'>
 
-				<ProfileCompo className={'w-1/4'}/>
-				<UserPosts className={'w-2/4'}/>
-				<FriendListCompo className={'w-1/4'}/>
+			<div className='bg-slate-100'>
+
+				<ProfileCompo className={'w-[25vw] border-r  '} />
+				<Navbar />
+				<div className='flex   justify-end  '>
+
+					<UserPosts className={'w-2/3 '} />
+					<FriendListCompo className={'w-1/3'} />
+				</div>
 			</div>
-			
+
 		</>
 	)
 }
